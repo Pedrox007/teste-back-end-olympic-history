@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "teste_back-end"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.0.3"
+djangorestframework = "^3.13.1"
+django-filter = "^21.1"
+django-heroku = "^0.3.1"
+python-decouple = "^3.6"
+whitenoise = "^6.0.0"
+django-cors-headers = "^3.11.0"
+psycopg2 = "^2.9.3"
+tqdm = "^4.63.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
