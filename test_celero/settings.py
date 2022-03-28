@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from decouple import config
 from dj_database_url import parse as db_url
@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool, default=False)
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,6 +45,7 @@ EXTERNAL_APPS = [
     "rest_framework",
     "django_filters",
     "corsheaders",
+    "rest_framework_swagger"
 ]
 
 LOCAL_APPS = [
@@ -68,7 +69,7 @@ ROOT_URLCONF = 'test_celero.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,6 +84,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'test_celero.wsgi.application'
 
+REST_FRAMEWORK = {
+    # "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+    "DEFAULT_PAGINATION_CLASS": "test_celero.utils.FilterPagination",
+    "PAGE_SIZE": 25,
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

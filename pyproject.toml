@@ -15,6 +15,9 @@ whitenoise = "^6.0.0"
 django-cors-headers = "^3.11.0"
 psycopg2 = "^2.9.3"
 tqdm = "^4.63.1"
+PyYAML = "^6.0"
+uritemplate = "^4.1.1"
+django-rest-swagger = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
 
