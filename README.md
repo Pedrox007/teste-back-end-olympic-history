@@ -44,11 +44,20 @@ python manage.py runserver
 
 Finalmente o projeto estará rodando no seu [localhost](http://localhost:8000/admin).
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Usando o Projeto
 
-Para usar <nome_do_projeto>, siga estas etapas:
-
+Após rodar o `Django Server`, para acessar o `Django Admin`, você precisará criar o superusuário. Para isso, basta rodar o seguinte comando:
 ```
-<exemplo_de_uso>
+python manage.py createsuperuser
 ```
+Após isso, você irá poder manipular e acessar os dados das tabelas de maneira mais rápida.
 
+O projeto também possui suporte para Swagger Docs. Basta acessar a rota [http://localhost:8000/swagger-ui/](http://localhost:8000/swagger-ui/). Nele você vai ter acesso à todas as rotas da api rest que o projeto possui, junto com cada schema de cada rota. Confira a seguir uma explicação sobre cada pacote de rotas:
+
+- **Athlete**: É o conjunto de rotas que você irá poder manipular os atletas com suas respectivas participações.
+- **Team**: É o conjunto de rotas que você irá poder manipular os times.
+- **Modality**: É o conjunto de rotas que você irá poder manipular as modalidades junto com seus respectivos esportes.
+- **Sport**: É o conjunto de rotas que você irá poder manipular os esportes.
+- **Game**: É o conjunto de rotas que vocÊ irá poder manipular os jogos olímpicos.
+
+Todas as rotas possuem filtros próprios, onde podem ser visualizados no detalhar da rota do Swagger Docs.
