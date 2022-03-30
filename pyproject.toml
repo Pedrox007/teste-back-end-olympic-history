@@ -18,6 +18,7 @@ tqdm = "^4.63.1"
 PyYAML = "^6.0"
 uritemplate = "^4.1.1"
 django-rest-swagger = "^2.2.0"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 
