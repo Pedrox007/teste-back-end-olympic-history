@@ -12,10 +12,11 @@ from core.models import (
 
 
 @transaction.atomic
-def populate_tables(csv_rows):
+def populate_tables(csv_rows, lines_to_read):
     csv_rows.sort(key=lambda x: x[0])
 
-    for i, row in zip(tqdm(range(len(csv_rows)), desc="Loading"), csv_rows):
+    lines_to_read = lines_to_read if lines_to_read else len(csv_rows)
+    for i, row in zip(tqdm(range(lines_to_read), desc="Loading"), csv_rows[0:lines_to_read]):
         team_obj = get_team_obj(row)
         athlete_obj = get_athlete_obj(row, team_obj)
         sport_obj = get_sport_obj(row)

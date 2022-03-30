@@ -34,7 +34,10 @@ Uma vez estando na raiz do projeto. Rode o seguinte comando para iniciar a impor
 ```
 python manage.py importcsvdata
 ```
-
+Você também pode passar o argumento opcional `lines_to_read` para, assim, ler uma quantidade limitada de linhas do csv. Com isso, o comando irá ficar assim, por exemplo:
+```
+python manage.py importcsvdata --lines_to_read 1000
+```
 >❗ Como o comando trata do caminho para o csv internamente, caso queira inserir seus próprios dados seguindo a mesma arquitetura da base de dados original, basta substituir o arquivo em `data/` utilizando o mesmo nome: `athlete_events.csv`.
 
 Com isso, o projeto está devidamente instalado. Agora basta rodar o seguinte comando para iniciar o `Django Server`:
