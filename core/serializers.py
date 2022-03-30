@@ -18,6 +18,7 @@ class SportSerializer(serializers.ModelSerializer):
 
 class ModalitySerializer(serializers.ModelSerializer):
     sport = SportSerializer(read_only=True)
+    sport_id = serializers.PrimaryKeyRelatedField(queryset=Sport.objects.all(), source="sport", write_only=True)
 
     class Meta:
         model = Modality

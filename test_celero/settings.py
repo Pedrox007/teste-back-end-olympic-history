@@ -86,6 +86,7 @@ WSGI_APPLICATION = 'test_celero.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
     "DEFAULT_PAGINATION_CLASS": "test_celero.utils.FilterPagination",
     "PAGE_SIZE": 25,
 }

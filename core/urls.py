@@ -9,7 +9,7 @@ router = DefaultRouter()
 router.register("athlete", views.AthleteViewSet)
 router.register("team", views.TeamViewSet)
 router.register("modality", views.ModalityViewSet)
-router.register("sports", views.SportViewSet)
+router.register("sport", views.SportViewSet)
 router.register("game", views.GameViewSet)
 
 urlpatterns = [path("", include(router.urls))]

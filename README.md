@@ -61,3 +61,9 @@ O projeto também possui suporte para Swagger Docs. Basta acessar a rota [http:/
 - **Game**: É o conjunto de rotas que vocÊ irá poder manipular os jogos olímpicos.
 
 Todas as rotas possuem filtros próprios, onde podem ser visualizados no detalhar da rota do Swagger Docs.
+
+## :checkered_flag: Disposição Finais
+O projeto possui testes unitários automatizados. Para checa-los basta rodar o comando:
+```
+python manage.py test
+```
