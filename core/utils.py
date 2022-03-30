@@ -1,4 +1,5 @@
 from django.core.exceptions import ObjectDoesNotExist
+from django.db import transaction
 from tqdm import tqdm
 from core.models import (
     Athlete,
@@ -10,6 +11,7 @@ from core.models import (
 )
 
 
+@transaction.atomic
 def populate_tables(csv_rows):
     csv_rows.sort(key=lambda x: x[0])
 
