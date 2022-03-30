@@ -67,3 +67,5 @@ O projeto possui testes unitários automatizados. Para checa-los basta rodar o c
 ```
 python manage.py test
 ```
+
+O projeto também está alocado remotamente no `Heroku`. Para acessar basta clicar neste [link](https://teste-celero.herokuapp.com/swagger-ui/).
