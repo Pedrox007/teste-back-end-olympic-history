@@ -1,8 +1,8 @@
-# Teste Celero
+# Teste Olympic History
 
 ### 📝 Descrição
 
-Este projeto faz parte do teste para a vaga de Desenvolvedor Back-end da Celero. Ele consiste em um crud com base nas informações do dataset “120 years of
+Este projeto faz parte de um teste de Back-end. Ele consiste em um crud com base nas informações do dataset “120 years of
 Olympic history: athletes and results” presente no [Kaggle](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results#athlete_events.csv). A partir dos dados presentes nas colunas do csv, foi conceituado e criado um modelo relacional com a seguinte arquitetura:
 
 ![Diagrama Relacional](static/diagram.png)
